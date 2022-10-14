@@ -16,8 +16,8 @@ function dividir(peso, estatura, estatura) {
 
 let peso = prompt("ingrese su peso corporal")
 let estatura = prompt("ingrese su estatura")
- dividir(peso , estatura , estatura)
- console.log( "su imc es"+resultado);
+dividir(peso, estatura, estatura)
+console.log("su imc es" + resultado);
 
 if (resultado < 18.5) {
     console.log("usted tiene bajo peso")
@@ -29,42 +29,38 @@ if (resultado < 18.5) {
 
 
 
-let trabajoSedentario = prompt("tiene un  trabajo sedentario (si/no) ");
+let tipoTrabajo = prompt("Qué tipo de trabajo tiene usted ? ingrese activo o sedentario  ");
 
+if (tipoTrabajo == "sedentario") {
+    console.log(" Le recomendamos hacer ejercicio para su bienestar ")
 
+    class tipoEmpleo {
+        constructor(empleo, lugar) {
+            this.empleo = empleo;
+            this.lugar = lugar;
+        }
 
-while ((trabajoSedentario != "si") && (trabajoSedentario != "no")) {
-    console.log(trabajoSedentario);
-    trabajoSedentario = prompt("ingrese si / no ")
-    console.log("recomendamos....")
-}
+        mostrarEmpleo() {
+            return "Tipo: " + this.empleo + "\nLugar: " + this.lugar;
+        }
 
-
-let dolor = prompt("en que parte del cuerpo sentis dolores o contracturas ?   (para finalizar ingrese : salir )");
-while (dolor != "salir") {
-    switch (dolor) {
-        case "espalda":
-            console.log("recomendamos ejercicio A");
-            break;
-        case "cervical":
-            console.log("recomendamos ejercicio B");
-            break;
-        case "cintura":
-            console.log("recomendamos ejercicio c");
-            break;
-
-        case "pies":
-        case "rodillas":
-            console.log("recomendamos ejercicio D");
-            break;
-        default:
-            console.log("ingrese una zona del cuerpo válida ");
-            break;
     }
-    dolor = prompt("en que parte del cuerpo sentis dolores o contracturas ?   (para finalizar ingrese : salir )");
+
+    const trabajo = new tipoEmpleo(prompt("Ingresa:" + "empleo" + "lugar"));
+
+
+    console.log(trabajo);
+
+    console.log(trabajo.mostrarEmpleo());
+
+    const listaEjercicios = ["ejercicios=" + "ejercicio 1 ", "ejercicio 2", "ejercicio 3"];
+    console.log("estos son los ejercicios recomendados para el trabajo sedentario" + "..." + listaEjercicios);
+
+
+} else if (tipoTrabajo == "activo") {
+    console.log("Le recomendamos hacer ejercicio para realizar sus actividades con  mayor eficiencia ");
 }
-
-
+// se repite la estructura pero con otras recomendaciones
 
 
 
