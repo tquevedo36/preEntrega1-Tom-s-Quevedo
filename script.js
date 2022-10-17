@@ -52,9 +52,20 @@ if (tipoTrabajo == "sedentario") {
     console.log(trabajo);
 
     console.log(trabajo.mostrarEmpleo());
+    const listaEjercicios=[
+        {
+           espalda:"ejercicio 1",
+            cintura:"ejercicio 2",
+            hombros:"ejercicio 3",
+           
+        },
+    ];
+        console.log("estos son los ejercicios recomendados para el trabajo sedentario" + "..." + listaEjercicios);
+    /*const listaEjercicios = ["ejercicios=" + "ejercicio 1 ", "ejercicio 2", "ejercicio 3"];
+    console.log("estos son los ejercicios recomendados para el trabajo sedentario" + "..." + listaEjercicios);*/
+    const existe = listaEjercicios.some((listaEjercicioso) => listaEjercicios.espalda == "ejercicio 1");
+console.log("Existe ejercicio1? "+existe);
 
-    const listaEjercicios = ["ejercicios=" + "ejercicio 1 ", "ejercicio 2", "ejercicio 3"];
-    console.log("estos son los ejercicios recomendados para el trabajo sedentario" + "..." + listaEjercicios);
 
 
 } else if (tipoTrabajo == "activo") {
